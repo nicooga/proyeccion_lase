@@ -1,0 +1,76 @@
+section
+  .row
+    .col-md-3
+      .description
+        legend Gráfica e industrias
+
+        ul
+          li Pieles de exportación
+          li Serializado e identificación
+          li Prototipos industriales
+          li Plantillas y juntas
+          li Grabado en metal, vidrio, acrílico, tela
+          li Marcado de metales sin tratar
+          li Cortes y grabado de cueros, jeans, sintéticos
+          li Paneles de instrumentos
+          li Corte de stickers con formas
+          li Cortes en papel y cartón
+          li Packaging
+
+    .col-md-9
+      .carousel
+        - folder = 'artistic'
+        - Dir.glob("source/images/gallery/#{folder}/*").each.with_index do |path, i|
+          - path = File.join "gallery", folder, File.basename(path)
+          .item class=(:active if i.zero?)
+            = image_tag path
+
+section
+  .row
+    .col-md-3
+      .description
+        legend Merchandising
+
+        ul
+          li Premios y trofeos
+          li LLaveros
+          li Bolígrafos
+          li Linternas
+          li Cortaplumas
+          li Artículos decorativos
+          li Cubiertos, platos y tablas
+          li Artículos de cristal y vidrio
+          li Estuches y cajas de vino
+
+    .col-md-9
+      .carousel
+        - folder = 'industry'
+        - Dir.glob("source/images/gallery/#{folder}/*").each.with_index do |path, i|
+          - path = File.join "gallery", folder, File.basename(path)
+          .item class=(:active if i.zero?)
+            = image_tag path
+
+section
+  .row
+    .col-md-3
+      .description
+        legend Merchandising
+
+        ul
+          li Premios y trofeos
+          li LLaveros
+          li Bolígrafos
+          li Linternas
+          li Cortaplumas
+          li Artículos decorativos
+          li Cubiertos, platos y tablas
+          li Artículos de cristal y vidrio
+          li Estuches y cajas de vino
+
+    .col-md-9
+      .carousel
+        - folder = 'merchandising'
+        - Dir.glob("source/images/gallery/#{folder}/*").each.with_index do |path, i|
+          - path = File.join "gallery", folder, File.basename(path)
+          .item class=(:active if i.zero?)
+            = image_tag path

@@ -1,0 +1,21 @@
+html
+  head
+    meta charset="utf-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    // Meta tags for search engines
+    meta name="ROBOTS" content="INDEX, FOLLOW"
+
+    title= current_page.data.title || "Poyecciones Láser"
+    link rel='icon' href='images/logo.png' type='image/gif'
+    = stylesheet_link_tag "all"
+    = stylesheet_link_tag "//cdn.jsdelivr.net/flexboxgrid/6.1.1/flexboxgrid.min.css"
+
+  body class=(page_classes)
+    = partial 'layouts/navbar'
+    .main_container= yield
+    = partial 'layouts/footer'
+
+    // Add js last so page loads first
+    = javascript_include_tag  "all"
