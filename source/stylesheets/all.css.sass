@@ -4,18 +4,13 @@
 @import 'font-awesome'
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web|Roboto)
 
+@import 'footer'
+
 $title_font: 'Titillium Web', sans-serif
 $normal_font: 'Roboto', sans-serif
 
 body
   background: url(http://subtlepatterns.com/patterns/nasty_fabric.png)
-
-footer
-  position: absolute
-  bottom: 0
-  width: 100%
-  padding: 15px
-  background-color: whitesmoke
 
 *, *:after, *:before
   box-sizing: border-box
@@ -27,6 +22,7 @@ h1, h2, h3, h4, h5, h6, legend
   font-family: $title_font
 
 header
+  border-bottom: 10px solid lightgrey
   padding: 15px
   background-color: whitesmoke
   color: crimson
@@ -98,31 +94,32 @@ section
     padding: 15px
 
   .carousel
-    position: relative
-    height: 300px
     @include display-flex
+    @include flex-direction(row-reverse)
     @include align-items(stretch)
 
-    @mixin active_item
-      @include box-shadow(0px 10px 12px 0px black)
-      @include flex-grow(1)
-      opacity: 1
-      width: 400px
-
     .item
-      @include flex-basis(3rem)
+      @include flex-basis(0)
+      @include flex-grow(1)
+      transition: flex-grow 1s, opacity 1s
       background-color: black
-      opacity: 0.5
-      transition: opacity 0.5s, box-shadow 0.5s, flex-grow 0.5s
+      height: 100%
+      text-align: center
+
       &:hover
-        @include active_item
+        @include flex-grow(10)
+
+        img
+          object-fit: contain
+
+      &:not(:hover)
+        opacity: 0.1
 
       img
-        display: block
-        margin: auto
+        vertical-align: middle
         height: 100%
 
-    &:not(:hover)
-      .item
-        &.active
-          @include active_item
+      .magic_img_centerer
+        vertical-align: middle
+        display: inline-block
+        height: 100%

@@ -17,13 +17,7 @@ section
           li Cortes en papel y cartón
           li Packaging
 
-    .col-md-9
-      .carousel
-        - folder = 'artistic'
-        - Dir.glob("source/images/gallery/#{folder}/*").each.with_index do |path, i|
-          - path = File.join "gallery", folder, File.basename(path)
-          .item class=(:active if i.zero?)
-            = image_tag path
+    .col-md-9= partial :gallery_carousel, locals: { folder: :artistic }
 
 section
   .row
@@ -42,13 +36,7 @@ section
           li Artículos de cristal y vidrio
           li Estuches y cajas de vino
 
-    .col-md-9
-      .carousel
-        - folder = 'industry'
-        - Dir.glob("source/images/gallery/#{folder}/*").each.with_index do |path, i|
-          - path = File.join "gallery", folder, File.basename(path)
-          .item class=(:active if i.zero?)
-            = image_tag path
+    .col-md-9= partial :gallery_carousel, locals: { folder: :industry }
 
 section
   .row
@@ -67,10 +55,4 @@ section
           li Artículos de cristal y vidrio
           li Estuches y cajas de vino
 
-    .col-md-9
-      .carousel
-        - folder = 'merchandising'
-        - Dir.glob("source/images/gallery/#{folder}/*").each.with_index do |path, i|
-          - path = File.join "gallery", folder, File.basename(path)
-          .item class=(:active if i.zero?)
-            = image_tag path
+    .col-md-9= partial :gallery_carousel, locals: { folder: :merchandising }

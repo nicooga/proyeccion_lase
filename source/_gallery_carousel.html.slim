@@ -1,0 +1,2 @@
+- image_paths = Dir.glob("source/images/gallery/#{folder}/*").map { |p| p.gsub(%r{\Asource},'') }
+= partial :carousel, locals: { img_paths: image_paths }
