@@ -1,0 +1,40 @@
+.carousel
+  @media only screen and (min-width: 48em)
+    height: 280px
+  height: 150px
+
+  @include display-flex
+  @include align-items(stretch)
+
+  .item
+    @include flex-basis(0)
+    @include flex-grow(1)
+    transition: flex-grow 1s, opacity 1s, box-shadow 1s
+    background-color: lightgrey
+    height: 100%
+    text-align: center
+
+    img
+      background-color: lightgrey
+      transition: height 1s, margin 1s, box-shadow 1s
+      vertical-align: middle
+      height: 100%
+
+    &:hover, &.active
+      @include flex-grow(10)
+
+      img
+        @include box-shadow(0px 5px 10px 0px black)
+        object-fit: contain
+
+        margin-top: -15px
+        margin-bottom: 100px
+
+    &:not(:hover):not(.active)
+      opacity: 0.5
+
+
+    .magic_img_centerer
+      vertical-align: middle
+      display: inline-block
+      height: 100%

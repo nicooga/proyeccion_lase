@@ -1,6 +1,9 @@
+- desc_col_class = 'col-lg-3 col-md-4 col-sm-5'
+- carousel_col_class = 'col-lg-9 col-md-8 col-sm-7'
+
 section
   .row
-    .col-md-3
+    div class=(desc_col_class)
       .description
         legend Gráfica e industrias
 
@@ -17,11 +20,12 @@ section
           li Cortes en papel y cartón
           li Packaging
 
-    .col-md-9= partial :gallery_carousel, locals: { folder: :artistic }
+    div class=(carousel_col_class)
+      = partial :gallery_carousel, locals: { folder: :artistic }
 
 section
   .row
-    .col-md-3
+    div class=(desc_col_class)
       .description
         legend Merchandising
 
@@ -36,11 +40,12 @@ section
           li Artículos de cristal y vidrio
           li Estuches y cajas de vino
 
-    .col-md-9= partial :gallery_carousel, locals: { folder: :industry }
+    div class=(carousel_col_class)
+      = partial :gallery_carousel, locals: { folder: :industry }
 
 section
   .row
-    .col-md-3
+    div class=(desc_col_class)
       .description
         legend Merchandising
 
@@ -55,4 +60,5 @@ section
           li Artículos de cristal y vidrio
           li Estuches y cajas de vino
 
-    .col-md-9= partial :gallery_carousel, locals: { folder: :merchandising }
+    div class=(carousel_col_class)
+      = partial :gallery_carousel, locals: { folder: :merchandising }

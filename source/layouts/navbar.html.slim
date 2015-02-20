@@ -1,13 +1,15 @@
 header
   .header_container
     .row.middle-xs
-      .col-md-1
+      .col-sm-1.col-xs-2
         .logo= image_tag 'images/logo.png'
-      .col-md-8
-        .slogan Fabricamos tu idea
-      .col-md-3
-        dl.horizontal.contact
-          dt Teléfono
-          dd 15 1234 7890
-          dt Mail
-          dd= mail_to 'info@proyeccionlaser.com'
+      .col-sm-11.col-xs-10
+        .row.middle-xs
+          .col-sm-6.col-xs-6
+            .slogan Fabricamos tu idea
+          .col-sm-6.col-xs-6
+            dl.horizontal.contact
+              dt Teléfono
+              dd 15 1234 7890
+              dt Mail
+              dd= mail_to 'info@proyeccionlaser.com'

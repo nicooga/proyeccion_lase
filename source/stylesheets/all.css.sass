@@ -5,6 +5,7 @@
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web|Roboto)
 
 @import 'footer'
+@import 'carousel'
 
 $title_font: 'Titillium Web', sans-serif
 $normal_font: 'Roboto', sans-serif
@@ -23,13 +24,14 @@ h1, h2, h3, h4, h5, h6, legend
 
 header
   border-bottom: 10px solid lightgrey
-  padding: 15px
   background-color: whitesmoke
-  color: crimson
+  color: firebrick
+  overflow: hidden
   @include box-shadow(0px 10px 12px -6px black)
 
   .header_container
-    width: 80%
+    width: 90vw
+    max-width: 100%
     margin: 0 auto
 
   .logo
@@ -37,10 +39,11 @@ header
 
   .slogan
     font-family: $title_font
-    font-size: 5rem
+    font-size: 4vw
 
   dl.contact
-    font-size: 1.3rem
+    font-size: 2vw
+
     a
       color: crimson
 
@@ -52,9 +55,14 @@ header
 dl.horizontal
   dt,dd
     display: inline-block
-    width: 49%
     margin: 0px
     padding: 3px
+
+  dt
+    width: 30%
+
+  dd
+    width: 70%
 
   dt
     text-align: right
@@ -74,7 +82,6 @@ ul
 
 section
   background-color: whitesmoke
-  height: 300px
   @include box-shadow(0px 10px 6px -6px black)
 
   &:not(:last-child)
@@ -84,42 +91,19 @@ section
     width: 100%
     margin-bottom: 10px
     border-bottom: 4px solid black
-
     font-size: 2rem
 
   ul
     margin: 0px
+    padding-left: 20px
 
   .description
     padding: 15px
 
-  .carousel
-    @include display-flex
-    @include flex-direction(row-reverse)
-    @include align-items(stretch)
+.row
+  margin-left: 0 !important
+  margin-right: 0 !important
 
-    .item
-      @include flex-basis(0)
-      @include flex-grow(1)
-      transition: flex-grow 1s, opacity 1s
-      background-color: black
-      height: 100%
-      text-align: center
-
-      &:hover
-        @include flex-grow(10)
-
-        img
-          object-fit: contain
-
-      &:not(:hover)
-        opacity: 0.1
-
-      img
-        vertical-align: middle
-        height: 100%
-
-      .magic_img_centerer
-        vertical-align: middle
-        display: inline-block
-        height: 100%
+  > [class^=col]
+    padding-left: 0 !important
+    padding-right: 0 !important
