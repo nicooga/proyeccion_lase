@@ -9,6 +9,7 @@
 $title_font: 'Zrnic', sans-serif
 $normal_font: 'Roboto', sans-serif
 $main_texture: url(http://subtlepatterns.com/patterns/nasty_fabric.png)
+$primary_color: firebrick
 
 @import 'footer'
 @import 'carousel'
@@ -22,13 +23,16 @@ body
 *
   font-family: $normal_font
 
-h1, h2, h3, h4, h5, h6, legend
+h1, h2, h3, h4, h5, h6, legend, a
   font-family: $title_font
+
+a
+  color: $primary_color
 
 header
   border-bottom: 10px solid lightgrey
   background-color: whitesmoke
-  color: firebrick
+  color: $primary_color
   overflow: hidden
   @include box-shadow(0px 10px 12px -6px black)
 
@@ -43,28 +47,21 @@ header
     .typography
       padding: 10px !important
 
-  .header_container
-    width: 90vw
-    max-width: 100%
-    margin: 0 auto
-
   .slogan
     padding: 0 1vw
     font-family: $title_font
     font-size: 5vw
 
-  dl.contact
+  text-align: right
+
+  .contact
+    background-color: lightgrey
+    padding: 3px
+    color: $primary_color
     font-family: $title_font
     font-size: 2vw
 
-    a
-      font-family: inherit
-      color: crimson
-
-    dt
-      font-weight: bold
-    dt:after
-      content: ':'
+    display: inline-block
 
 dl.horizontal
   dt,dd
@@ -105,7 +102,7 @@ section
     margin-bottom: 10px
     border-bottom: 10px solid lightgrey
     font-size: 2rem
-    background-color: firebrick
+    background-color: $primary_color
     color: whitesmoke
     padding: 10px
 
@@ -121,6 +118,11 @@ section
 
     li:not(:last-child)
       padding-bottom: 1px
+
+    li:before
+      @extend .fa, .fa-check-square,
+      padding-right: 4px
+      color: $primary_color
 
 .row
   margin-left: 0 !important

@@ -1,17 +1,24 @@
 header
-  .header_container
-    .row.middle-xs.gutter_less
-      .col-sm-2
-        .logo.row.middle-xs
-          .col-xs-3.logotype= image_tag 'images/logo.png'
-          .col-xs-9.typography= image_tag 'images/tipografia.png'
-      .col-sm-10
-        .row.middle-xs.gutter_less
-          .col-xs-8
-            .slogan Fabricamos tu idea
-          .col-xs-4
-            dl.horizontal.contact
-              dt Teléfono
-              dd 15 1234 7890
-              dt Mail
-              dd= mail_to 'info@proyeccionlaser.com'
+  .row.middle-xs.gutter_less
+    .col-sm-2
+      .logo.row.middle-xs
+        .col-xs-3.logotype= image_tag 'images/logo.png'
+        .col-xs-9.typography= image_tag 'images/tipografia.png'
+    .col-sm-10
+      .row.middle-xs.gutter_less
+        .col-xs-8
+          .slogan Fabricamos tu idea
+        .col-xs-4
+          .contact
+            .item
+              | (+5411) 15 5455 3177
+              |  
+              i.fa.fa-phone-square.fa-fw
+            .item
+              = mail_to 'info@proyeccionlaser.com'
+              |  
+              i.fa.fa-envelope-o.fa-fw
+            .item
+              = link_to 'Proyección Láser', 'https://www.facebook.com/profile.php?id=100008686891740'
+              |  
+              i.fa.fa-facebook-square.fa-fw
