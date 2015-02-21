@@ -2,9 +2,7 @@
   @media only screen and (min-width: 48em)
     height: 280px
   height: 120px
-
   @include display-flex
-  @include align-items(stretch)
 
   .item
     @include flex-basis(0)
@@ -22,13 +20,13 @@
 
     &:hover, &.active
       @include flex-grow(10)
+      padding: 0 1.5vmin
 
       img
         @include box-shadow(0px 5px 10px 0px black)
         object-fit: contain
 
-        margin-top: -1.5vmin
-        margin-bottom: 100px
+        margin-top: -3vmin
 
     &:not(:hover):not(.active)
       opacity: 0.5

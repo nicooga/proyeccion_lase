@@ -1,13 +1,15 @@
 header
   .header_container
-    .row.middle-xs
-      .col-sm-1.col-xs-2
-        .logo= image_tag 'images/logo.png'
-      .col-sm-11.col-xs-10
-        .row.middle-xs
-          .col-sm-6.col-xs-6
+    .row.middle-xs.gutter_less
+      .col-sm-2
+        .logo.row.middle-xs
+          .col-xs-3.logotype= image_tag 'images/logo.png'
+          .col-xs-9.typography= image_tag 'images/tipografia.png'
+      .col-sm-10
+        .row.middle-xs.gutter_less
+          .col-xs-8
             .slogan Fabricamos tu idea
-          .col-sm-6.col-xs-6
+          .col-xs-4
             dl.horizontal.contact
               dt Teléfono
               dd 15 1234 7890
