@@ -11,4 +11,3 @@ gem 'normalize-rails', require: false
 gem 'font-awesome-middleman'
 gem 'middleman-jquery'
 gem 'underscore-rails', require: false
-gem 'font-awesome-middleman'
