@@ -1,37 +1,36 @@
-.carousel
-  @media only screen and (min-width: 48em)
-    height: 320px
-  height: 120px
-  @include display-flex
+.carousel_col
+  @include align-self(center)
+  background-color: lightgrey
 
-  .item
-    @include flex-basis(0)
-    @include flex-grow(1)
-    transition: flex-grow 1s, opacity 1s, box-shadow 1s
-    background-color: lightgrey
-    height: 100%
-    text-align: center
+  .carousel
+    @media only screen and (min-width: 48em)
+      height: 275px
+    height: 120px
+    @include display-flex
 
-    img
+    .item
+      @include flex-basis(0)
+      @include flex-grow(1)
+      transition: all 1s
       background-color: lightgrey
-      transition: height 1s, margin 1s, box-shadow 1s
-      vertical-align: middle
       height: 100%
-
-    &:hover, &.active
-      @include flex-grow(10)
-      padding: 0 1.5vmin
+      text-align: center
 
       img
-        @include box-shadow(0px 5px 10px 0px black)
-        object-fit: contain
+        background: $main_texture
+        transition: all 1s
+        vertical-align: middle
+        height: 100%
 
-        margin-top: -3vmin
+      &:hover, &.active
+        @include flex-grow(10)
+        padding: 0 1.5vmin
 
-    &:not(:hover):not(.active)
-      opacity: 0.5
+        img
+          @include box-shadow(0px 5px 10px 0px black)
+          object-fit: contain
 
-    .magic_img_centerer
-      vertical-align: middle
-      display: inline-block
-      height: 100%
+      &:before
+        vertical-align: middle
+        display: inline-block
+        height: 100%

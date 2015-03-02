@@ -1,97 +1,90 @@
 - desc_col_class = 'col-lg-3 col-md-4 col-sm-5'
 - carousel_col_class = 'col-lg-9 col-md-8 col-sm-7'
 
-.row
-  .col-lg-10
-    section
-      .row.gutter_less
-        div class=(desc_col_class)
-          .description
-            legend Gráfica e industrias
-
-            ul
-              li Pieles de exportación
-              li Serializado e identificación
-              li Prototipos industriales
-              li Plantillas y juntas
-              li Grabado en metal, vidrio, acrílico, tela
-              li Marcado de metales sin tratar
-              li Cortes y grabado de cueros, jeans, sintéticos
-              li Paneles de instrumentos
-              li Corte de stickers con formas
-              li Cortes en papel y cartón
-              li Packaging
-
-        div class=(carousel_col_class)
-          = partial :gallery_carousel, locals: { folder: :artistic }
-
-    section
-      .row.gutter_less
-        div class=(desc_col_class)
-          .description
-            legend Merchandising
-
-            ul
-              li Premios y trofeos
-              li LLaveros
-              li Bolígrafos
-              li Linternas
-              li Cortaplumas
-              li Artículos decorativos
-              li Cubiertos, platos y tablas
-              li Artículos de cristal y vidrio
-              li Estuches y cajas de vino
-
-        div class=(carousel_col_class)
-          = partial :gallery_carousel, locals: { folder: :industry }
-
-    section
-      .row.gutter_less
-        div class=(desc_col_class)
-          .description
-            legend Artística, Arquitectura
-
-            ul
-              li Maquetería de precisión 
-              li Molduras, figuras en fibrofácil
-              li Creación de modelos 3D
-              li Stencils, plantillas, troquelados
-              li Corte y grabado de cartón, fibrofácil
-              li Modelos para ensamblar
-              li Juegos infantiles. Rompecabezas
-
-        div class=(carousel_col_class)
-          = partial :gallery_carousel, locals: { folder: :merchandising }
-
-  .col-lg-2
-    section
+section
+  .row.gutter_less.align_items_stretch
+    div class=(desc_col_class)
       .description
-        legend Materiales
+        legend Gráfica e industrias
 
-        .row
-          .col-lg-12.col-sm-6
-            ul
-              li MDF o Fibrofácil hasta 9mm
-              li Maderas
-              li Mármol
-              li Cerámica
-              li Acrílico hasta 12mm
-              li Alto impacto
-              li Goma eva
-              li Cartón
-              li Corcho
-              li Papeles
-              li Cueros
+        ul
+          li Pieles de exportación
+          li Serializado e identificación
+          li Prototipos industriales
+          li Plantillas y juntas
+          li Grabado en metal, vidrio, acrílico, tela
+          li Marcado de metales sin tratar
+          li Cortes y grabado de cueros, jeans, sintéticos
+          li Paneles de instrumentos
+          li Corte de stickers con formas
+          li Cortes en papel y cartón
+          li Packaging
 
-          .col-lg-12.col-sm-6
-            ul
-              li Pieles
-              li Telas
-              li Vidrio
-              li Madera balsa
-              li Plásticos varios
-              li Telas en general
-              li Piedra
-              li Cerámica
-              li Vidrio
-              li Metales
+    .carousel_col class=(carousel_col_class)
+      = partial :gallery_carousel, locals: { folder: :artistic }
+
+section
+  .row.gutter_less
+    div class=(desc_col_class)
+      .description
+        legend Merchandising
+
+        ul
+          li Premios y trofeos
+          li LLaveros
+          li Bolígrafos
+          li Linternas
+          li Cortaplumas
+          li Artículos decorativos
+          li Cubiertos, platos y tablas
+          li Artículos de cristal y vidrio
+          li Estuches y cajas de vino
+
+    .carousel_col class=(carousel_col_class)
+      = partial :gallery_carousel, locals: { folder: :industry }
+
+section
+  .row.gutter_less
+    div class=(desc_col_class)
+      .description
+        legend Artística, Arquitectura
+
+        ul
+          li Maquetería de precisión 
+          li Molduras, figuras en fibrofácil
+          li Creación de modelos 3D
+          li Stencils, plantillas, troquelados
+          li Corte y grabado de cartón, fibrofácil
+          li Modelos para ensamblar
+          li Juegos infantiles. Rompecabezas
+
+    .carousel_col class=(carousel_col_class)
+      = partial :gallery_carousel, locals: { folder: :merchandising }
+
+section
+  .description
+    legend Materiales
+
+    .row
+      ul.materials
+        li MDF o Fibrofácil hasta 9mm
+        li Maderas
+        li Mármol
+        li Cerámica
+        li Acrílico hasta 12mm
+        li Alto impacto
+        li Goma eva
+        li Cartón
+        li Corcho
+        li Papeles
+        li Cueros
+        li Pieles
+        li Telas
+        li Vidrio
+        li Madera balsa
+        li Plásticos varios
+        li Telas en general
+        li Piedra
+        li Cerámica
+        li Vidrio
+        li Metales

@@ -30,7 +30,7 @@ a
   color: $primary_color
 
 header
-  border-bottom: 10px solid lightgrey
+  border-bottom: 5px solid lightgrey
   background-color: whitesmoke
   color: $primary_color
   overflow: hidden
@@ -38,8 +38,6 @@ header
 
   .logo
     @include align-items(stretch)
-    background-color: lightgrey
-
     padding: 5px !important
 
     .logotype
@@ -48,18 +46,27 @@ header
       padding: 10px !important
 
   .slogan
+    font-size: 2rem
+    @media only screen and (min-width: 48em)
+      font-size: 4rem
+    text-align: left
     padding: 0 1vw
     font-family: $title_font
-    font-size: 5vw
+
+  .slogan_and_contact
+    @media only screen and (max-width: 48em)
+      background: lightgrey
+
 
   text-align: right
 
   .contact
-    background-color: lightgrey
     padding: 3px
     color: $primary_color
     font-family: $title_font
-    font-size: 2vw
+    font-size: 0,rem
+    @media only screen and (min-width: 48em)
+      font-size: 1.3rem
 
     display: inline-block
 
@@ -93,18 +100,18 @@ ul
   margin: 0 5vmin
 
 section
-  margin-top: 3.5vmin
+  margin-top: 1.5vmin
   background-color: whitesmoke
   @include box-shadow(0px 10px 6px -6px black)
 
   legend
     width: 100%
     margin-bottom: 10px
-    border-bottom: 10px solid lightgrey
-    font-size: 2rem
+    border-bottom: 5px solid lightgrey
+    font-size: 1.3rem
     background-color: $primary_color
     color: whitesmoke
-    padding: 10px
+    padding: 5px
 
   ul
     list-style-type: none
@@ -122,7 +129,7 @@ section
     li:before
       @extend .fa, .fa-check-square,
       padding-right: 4px
-      color: $primary_color
+      color: lightgrey
 
 .row
   margin-left: 0 !important
@@ -136,5 +143,14 @@ section
     padding-left: 0 !important
     padding-right: 0 !important
 
+  &.align_items_stretch
+    @include align-items(stretch)
+
   + row
     margin-left: 3.5vmin
+
+ul.materials
+  li
+    display: inline-block
+    &:not(:last-child)
+      margin-right: 5px
