@@ -2,10 +2,14 @@
   @include align-self(center)
   background-color: lightgrey
 
+  overflow-x: scroll
+  overflow-y: hidden
+
   .carousel
     @media only screen and (min-width: 48em)
       height: 275px
     height: 120px
+    width: 800%
     @include display-flex
 
     .item
@@ -17,18 +21,20 @@
       text-align: center
 
       img
-        background: $main_texture
         transition: all 1s
         vertical-align: middle
         height: 100%
 
-      &:hover, &.active
-        @include flex-grow(10)
-        padding: 0 1.5vmin
 
-        img
-          @include box-shadow(0px 5px 10px 0px black)
-          object-fit: contain
+        object-fit: contain
+
+      // &:hover, &.active
+      //   @include flex-grow(10)
+      //   padding: 0 1.5vmin
+
+      //   img
+      //     @include box-shadow(0px 5px 10px 0px black)
+      //     object-fit: contain
 
       &:before
         vertical-align: middle
