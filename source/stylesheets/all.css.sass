@@ -14,7 +14,7 @@ $primary_color: firebrick
 @import 'carousel'
 
 body
-  background: lightgrey
+  background-image: linear-gradient(to bottom right, darkgrey, $primary_color)
 
 *, *:after, *:before
   box-sizing: border-box
@@ -24,24 +24,22 @@ body
 
 h1, h2, h3, h4, h5, h6, legend, a
   font-family: $title_font
-
 a
   color: $primary_color
 
 header
   @include align-items(stretch)
   background-color: whitesmoke
-  border-bottom: 10px solid lightgrey
+  border-bottom: 10px solid darkgrey
   color: $primary_color
   overflow: hidden
 
   .logo
-    background-color: lightgrey
-    padding: 5px !important
+    background-color: whitesmoke
+    padding: 5px
 
-    .logotype
-      padding: 5px !important
-    .typography
+    .logotype, .typography
+      margin: auto
       padding: 5px !important
 
   .slogan
@@ -59,8 +57,6 @@ header
     font-family: $title_font
 
   .slogan_and_contact
-    @include box-shadow(0px 10px 10px -10px black)
-
     .row
       margin-top: auto
 
@@ -103,13 +99,72 @@ img
 ul
   list-style-type: square
 
-section
-  margin-top: 15px
-  background-color: whitesmoke
-  @include border-top-left-radius(5px)
+.row
+  margin-left: 0 !important
+  margin-right: 0 !important
+
+  > [class^=col]
+    width: 100%
+
+  &.gutter_less > [class^=col]
+    padding-left: 0
+    padding-right: 0
+
+  &.align_items_stretch
+    @include align-items(stretch)
+
+  + row
+    margin-left: 3.5vmin
+
+ul.materials
+  li
+    display: inline-block
+    &:not(:last-child)
+      margin-right: 5px
+
+.main_message
+  font-size: 13px
+  text-align: center
+  padding: 10px
+  color: whitesmoke
+
+  @media only screen and (min-width: 48em)
+    font-size: 30px
+    text-align: right
+    padding: 15px
+
+  p
+    margin: 0 15px
+    padding-bottom: 10px
+    border-bottom: 5px solid whitesmoke
+
+  strong
+    color: $primary_color
+    @include text-shadow(0px, 0px, 3px, 1px, white)
+
+  .emphasis
+    font-weight: bold
+
+.applications
+  padding: 15px !important
+  padding-right: 0 !important
+  padding-top: 0 !important
+
+  background-color: rgba(darkgrey, 0.5)
   @include border-bottom-left-radius(5px)
   @include box-shadow(0px 10px 10px -10px black)
+
+  h1
+    margin: 0
+    padding: 10px
+
+section
+  background-color: whitesmoke
+  @include box-shadow(0px 10px 10px -10px black)
   overflow: hidden
+
+  &:not(:last-child)
+    margin-bottom: 15px
 
   legend
     width: 100%
@@ -137,59 +192,3 @@ section
       @extend .fa, .fa-check-square,
       padding-right: 4px
       color: lightgrey
-
-.row
-  margin-left: 0 !important
-  margin-right: 0 !important
-
-
-  > [class^=col]
-    width: 100%
-
-  &.gutter_less > [class^=col]
-    padding-left: 0 !important
-    padding-right: 0 !important
-
-  &.align_items_stretch
-    @include align-items(stretch)
-
-  + row
-    margin-left: 3.5vmin
-
-ul.materials
-  li
-    display: inline-block
-    &:not(:last-child)
-      margin-right: 5px
-
-.main_message
-  background-color: lightgrey
-
-  font-size: 13px
-  text-align: center
-  padding: 5px
-
-  @media only screen and (min-width: 48em)
-    font-size: 30px
-    text-align: right
-    padding: 0
-
-  p
-    margin: 0
-    margin-top: auto
-
-  strong
-    color: $primary_color
-
-  .emphasis
-    font-weight: bold
-
-.applications
-  padding: 15px !important
-  padding-right: 0 !important
-  background-color: darkgrey
-  @include border-bottom-left-radius(5px)
-  @include box-shadow(0px 10px 10px -10px black)
-
-  h1
-    margin: 0

@@ -1,5 +1,5 @@
 - desc_col_class = 'col-lg-3 col-md-4 col-sm-5'
-- carousel_col_class = 'col-lg-9 col-md-8 col-sm-7'
+- carousel_col_class = 'col-lg-9 col-md-8 col-sm-7 carousel_col'
 
 h1 Algunas de las cosas que sabemos hacer ...
 
@@ -22,7 +22,7 @@ section
           li Cortes en papel y cartón
           li Packaging
 
-    .carousel_col class=(carousel_col_class)
+    div class=(carousel_col_class)
       = partial :gallery_carousel, locals: { folder: :artistic }
 
 section
@@ -42,7 +42,7 @@ section
           li Artículos de cristal y vidrio
           li Estuches y cajas de vino
 
-    .carousel_col class=(carousel_col_class)
+    div class=(carousel_col_class)
       = partial :gallery_carousel, locals: { folder: :industry }
 
 section
@@ -60,7 +60,7 @@ section
           li Modelos para ensamblar
           li Juegos infantiles. Rompecabezas
 
-    .carousel_col class=(carousel_col_class)
+    div class=(carousel_col_class)
       = partial :gallery_carousel, locals: { folder: :merchandising }
 
 section
