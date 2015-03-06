@@ -1,22 +1,21 @@
-header
-  .row.middle-xs.gutter_less
-    .col-sm-3
-      .logo.row.middle-xs
-        .col-xs-3.logotype= image_tag 'images/logo.png'
-        .col-xs-9.typography= image_tag 'images/tipografia.png'
-    .col-sm-9.slogan_and_contact
-      .row.middle-xs.gutter_less
-        .col-md-8.col-xs-6: .slogan Fabricamos tu idea
-        .col-md-4.col-xs-6: .contact
-          .item
-            | (+5411) 15 5455 3177
-            |  
-            i.fa.fa-phone-square.fa-fw
-          .item
-            = mail_to 'info@proyeccionlaser.com'
-            |  
-            i.fa.fa-envelope-o.fa-fw
-          .item
-            = link_to 'Proyección Láser', 'https://www.facebook.com/profile.php?id=100008686891740'
-            |  
-            i.fa.fa-facebook-square.fa-fw
+header.row.gutter_less.align_items_stretch
+  .col-lg-2.col-sm-3.logo
+    .logo.row
+      .col-xs-3.logotype= image_tag 'images/logo.png'
+      .col-xs-9.typography= image_tag 'images/tipografia.png'
+  .col-lg-10.col-sm-9.slogan_and_contact
+    .row.gutter_less
+      .col-md-8.col-xs-6:.slogan Fabricamos tu idea
+      .col-md-4.col-xs-6:.contact
+        .item
+          | (+5411) 15 5455 3177
+          |  
+          i.fa.fa-phone-square.fa-fw
+        .item
+          = mail_to 'info@proyeccionlaser.com'
+          |  
+          i.fa.fa-envelope-o.fa-fw
+        .item
+          = link_to 'Proyección Láser', 'https://www.facebook.com/profile.php?id=100008686891740'
+          |  
+          i.fa.fa-facebook-square.fa-fw

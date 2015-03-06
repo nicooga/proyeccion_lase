@@ -8,14 +8,13 @@
 
 $title_font: 'Zrnic', sans-serif
 $normal_font: 'Roboto', sans-serif
-$main_texture: url(http://subtlepatterns.com/patterns/nasty_fabric.png)
 $primary_color: firebrick
 
 @import 'footer'
 @import 'carousel'
 
 body
-  background: $main_texture
+  background: lightgrey
 
 *, *:after, *:before
   box-sizing: border-box
@@ -30,33 +29,40 @@ a
   color: $primary_color
 
 header
-  border-bottom: 5px solid lightgrey
+  @include align-items(stretch)
   background-color: whitesmoke
+  border-bottom: 10px solid lightgrey
   color: $primary_color
   overflow: hidden
-  @include box-shadow(0px 10px 12px -6px black)
 
   .logo
-    @include align-items(stretch)
+    background-color: lightgrey
     padding: 5px !important
 
     .logotype
       padding: 5px !important
     .typography
-      padding: 10px !important
+      padding: 5px !important
 
   .slogan
     font-size: 1.3rem
     @media only screen and (min-width: 48em)
       font-size: 4rem
 
+    &:before
+      vertical-align: middle
+      display: inline-block
+      height: 100%
+
     text-align: left
     padding: 0 1vw
     font-family: $title_font
 
   .slogan_and_contact
-    @media only screen and (max-width: 48em)
-      background: lightgrey
+    @include box-shadow(0px 10px 10px -10px black)
+
+    .row
+      margin-top: auto
 
 
   text-align: right
@@ -97,16 +103,13 @@ img
 ul
   list-style-type: square
 
-.main_container
-  margin: 0 5vmin
-
-  @media only screen and (min-width: 48em)
-    margin: 0 15%
-
 section
   margin-top: 15px
   background-color: whitesmoke
-  @include box-shadow(0px 10px 6px -6px black)
+  @include border-top-left-radius(5px)
+  @include border-bottom-left-radius(5px)
+  @include box-shadow(0px 10px 10px -10px black)
+  overflow: hidden
 
   legend
     width: 100%
@@ -158,3 +161,35 @@ ul.materials
     display: inline-block
     &:not(:last-child)
       margin-right: 5px
+
+.main_message
+  background-color: lightgrey
+
+  font-size: 13px
+  text-align: center
+  padding: 5px
+
+  @media only screen and (min-width: 48em)
+    font-size: 30px
+    text-align: right
+    padding: 0
+
+  p
+    margin: 0
+    margin-top: auto
+
+  strong
+    color: $primary_color
+
+  .emphasis
+    font-weight: bold
+
+.applications
+  padding: 15px !important
+  padding-right: 0 !important
+  background-color: darkgrey
+  @include border-bottom-left-radius(5px)
+  @include box-shadow(0px 10px 10px -10px black)
+
+  h1
+    margin: 0
