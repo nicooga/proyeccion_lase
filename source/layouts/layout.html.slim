@@ -18,14 +18,19 @@ html
     .content
       .row.align_items_stretch
         .col-lg-2.col-sm-3.main_message
-          p
-            | Llevamos tus diseños del plano a la realidad con la ayuda de 
-            strong maquinaria de precisión
-            | y 
-            strong materiales de alta calidad.
-            |  
-            br
-            em.emphasis ¿Que tenés en mente?
+          .what_do_we_do
+            h1 ¿Que hacemos?
+
+            ul
+              li Creaciones
+              li Soluciones
+              li Servicios
+
+            ul.zarasa
+              li En proyección Láser, fabricamos las ideas de nuestros clientes
+              li Interpretamos y materializamos proyectos empresariales
+              li Compatibilizamos el objetivo de un emprendimiento con el estilo de su autor
+
         .col-lg-10.col-sm-9.applications= yield
 
     .footer= partial 'layouts/footer'

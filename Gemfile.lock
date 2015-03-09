@@ -149,3 +149,4 @@ DEPENDENCIES
   middleman-slim
   normalize-rails
   pry
+  sass
