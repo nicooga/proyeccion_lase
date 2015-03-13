@@ -11,3 +11,7 @@ gem 'middleman-slim'
 gem 'normalize-rails', require: false
 gem 'font-awesome-middleman'
 gem 'middleman-jquery'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-flexboxgrid'
+end
